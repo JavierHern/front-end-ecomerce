@@ -8,6 +8,11 @@
   background-color: #f5f5f7;
   overflow: hidden;
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .hero {
+  background-color: #161618;
 }
 
 .hero-content {
@@ -22,6 +27,11 @@
   letter-spacing: -0.5px;
   margin-bottom: 10px;
   color: #1d1d1f;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .hero-title {
+  color: #f5f5f7;
 }
 
 .hero-subtitle {
@@ -29,6 +39,11 @@
   font-weight: 400;
   color: #1d1d1f;
   margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .hero-subtitle {
+  color: #f5f5f7;
 }
 
 .hero-description {
@@ -38,6 +53,11 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .hero-description {
+  color: #a1a1a6;
 }
 
 .hero-links {
@@ -67,6 +87,11 @@
 
 .hero-link.secondary {
   color: #0071e3;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .hero-link.secondary {
+  color: #409cff;
 }
 
 .hero-link.secondary:hover {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -32,6 +33,7 @@ const Navbar = () => {
           <Link to="/soporte" className="nav-item">Soporte</Link>
         </div>
         <div className="nav-icons">
+          <ThemeToggle />
           <Link to="/buscar" className="nav-icon">
             <i className="fas fa-search"></i>
           </Link>

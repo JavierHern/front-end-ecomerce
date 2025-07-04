@@ -51,6 +51,17 @@ body {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #1d1d1f;
   background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  color-scheme: dark;
+}
+
+.dark-mode body {
+  color: #f5f5f7;
+  background-color: #1d1d1f;
 }
 
 .App {
@@ -68,6 +79,11 @@ main {
   background-color: #f5f5f7;
   padding: 20px 0;
   margin-top: 60px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .footer {
+  background-color: #161618;
 }
 
 .footer-content {
@@ -77,6 +93,11 @@ main {
   text-align: center;
   font-size: 14px;
   color: #86868b;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .footer-content {
+  color: #a1a1a6;
 }
 
 /* Estilos para textos y botones generales */
@@ -86,12 +107,22 @@ button {
 
 a {
   color: #0071e3;
+  transition: color 0.3s ease;
+}
+
+.dark-mode a {
+  color: #409cff;
 }
 
 .section-divider {
   height: 1px;
   background-color: #d2d2d7;
   margin: 40px 0;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .section-divider {
+  background-color: #424245;
 }
 
 /* Animaciones globales */
