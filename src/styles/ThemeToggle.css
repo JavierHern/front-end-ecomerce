@@ -1,0 +1,66 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #1d1d1f;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+/* Dark mode styles */
+.dark-mode .theme-toggle {
+  color: #f5f5f7;
+}
+
+.dark-mode .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles for ThemeToggle */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+/* Better touch targets for mobile */
+@media (hover: none) {
+  .theme-toggle {
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .theme-toggle:active {
+    transform: scale(0.95);
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  
+  .dark-mode .theme-toggle:active {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}

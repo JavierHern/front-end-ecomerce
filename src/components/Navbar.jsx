@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import './Navbar.css';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
