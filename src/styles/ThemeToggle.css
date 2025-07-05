@@ -64,3 +64,26 @@
     background-color: rgba(255, 255, 255, 0.15);
   }
 }
+
+/* Estilos para elementos esenciales */
+.theme-toggle.essential {
+  display: flex;
+}
+
+/* Comportamiento en modo compacto */
+@media (max-width: 650px) {
+  .theme-toggle.essential {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .theme-toggle.essential {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    padding: 6px;
+  }
+}

@@ -56,12 +56,43 @@
   transform: scale(1.05);
 }
 
+/* Sistema de navegación adaptativo */
 .nav-menu {
   display: flex;
   gap: 40px;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
+/* Elementos esenciales que siempre permanecen */
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-icon.essential {
+  /* Iconos esenciales: search, cart, theme toggle */
+  display: flex;
+}
+
+/* Clases para controlar la visibilidad progresiva */
+.nav-item.priority-low {
+  /* Soporte y Accesorios se ocultan primero */
+  display: flex;
+}
+
+.nav-item.priority-medium {
+  /* Novedades se oculta en segundo lugar */
+  display: flex;
+}
+
+.nav-item.priority-high {
+  /* Inicio y Productos se mantienen más tiempo */
+  display: flex;
+}
+
+/* Estilos base para nav-item */
 .nav-item {
   color: #1d1d1f;
   text-decoration: none;
@@ -303,5 +334,76 @@
   .nav-icon {
     font-size: 16px;
     padding: 4px;
+  }
+}
+
+/* SISTEMA DE OCULTACIÓN PROGRESIVA SEGÚN ANCHO DE VENTANA */
+
+/* Paso 1: Ocultar elementos de baja prioridad en pantallas medianas */
+@media (max-width: 1100px) {
+  .nav-item.priority-low {
+    display: none;
+  }
+  
+  .nav-menu {
+    gap: 32px;
+  }
+}
+
+/* Paso 2: Ocultar elementos de prioridad media */
+@media (max-width: 950px) {
+  .nav-item.priority-medium {
+    display: none;
+  }
+  
+  .nav-menu {
+    gap: 28px;
+  }
+}
+
+/* Paso 3: Ocultar más elementos, mantener solo esenciales */
+@media (max-width: 800px) {
+  .nav-item.priority-high:not(.priority-essential) {
+    display: none;
+  }
+  
+  .nav-menu {
+    gap: 24px;
+  }
+}
+
+/* Paso 4: Mantener solo logo y iconos esenciales */
+@media (max-width: 650px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .navbar-container {
+    justify-content: space-between;
+  }
+  
+  .nav-icons {
+    gap: 16px;
+  }
+  
+  /* Solo mostrar iconos esenciales */
+  .nav-icon:not(.essential) {
+    display: none;
+  }
+}
+
+/* Paso 5: Versión ultra compacta para móviles muy pequeños */
+@media (max-width: 400px) {
+  .navbar-logo {
+    font-size: 20px;
+  }
+  
+  .nav-icons {
+    gap: 12px;
+  }
+  
+  .nav-icon.essential {
+    font-size: 16px;
+    padding: 6px;
   }
 }

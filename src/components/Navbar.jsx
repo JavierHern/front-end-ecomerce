@@ -26,18 +26,18 @@ const Navbar = () => {
           CubrikStore
         </Link>
         <div className="nav-menu">
-          <Link to="/" className="nav-item">Inicio</Link>
-          <Link to="/productos" className="nav-item">Productos</Link>
-          <Link to="/novedades" className="nav-item">Novedades</Link>
-          <Link to="/accesorios" className="nav-item">Accesorios</Link>
-          <Link to="/soporte" className="nav-item">Soporte</Link>
+          <Link to="/" className="nav-item priority-high priority-essential">Inicio</Link>
+          <Link to="/productos" className="nav-item priority-high">Productos</Link>
+          <Link to="/novedades" className="nav-item priority-medium">Novedades</Link>
+          <Link to="/accesorios" className="nav-item priority-low">Accesorios</Link>
+          <Link to="/soporte" className="nav-item priority-low">Soporte</Link>
         </div>
         <div className="nav-icons">
           <ThemeToggle />
-          <Link to="/buscar" className="nav-icon">
+          <Link to="/buscar" className="nav-icon essential">
             <i className="fas fa-search"></i>
           </Link>
-          <Link to="/carrito" className="nav-icon">
+          <Link to="/carrito" className="nav-icon essential">
             <i className="fas fa-shopping-bag"></i>
           </Link>
         </div>
