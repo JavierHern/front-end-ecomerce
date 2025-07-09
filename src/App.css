@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #1d1d1f;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #f5f5f7;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
   transition: all 0.3s ease;
   margin: 0;
   padding: 0;
@@ -25,16 +25,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-/* Dark mode styles */
-.dark-mode {
   color-scheme: dark;
-}
-
-.dark-mode body {
-  color: #f5f5f7;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
 }
 
 .App {
@@ -81,15 +72,15 @@ main {
     max-width: 1400px;
     padding: 0 40px;
   }
-  
+
   body {
     font-size: 18px;
   }
-  
+
   .section {
     padding: 120px 0;
   }
-  
+
   main {
     padding-top: 90px;
   }
@@ -101,11 +92,11 @@ main {
     max-width: 1200px;
     padding: 0 32px;
   }
-  
+
   .section {
     padding: 100px 0;
   }
-  
+
   main {
     padding-top: 85px;
   }
@@ -117,11 +108,11 @@ main {
     max-width: 1000px;
     padding: 0 28px;
   }
-  
+
   .section {
     padding: 90px 0;
   }
-  
+
   main {
     padding-top: 80px;
   }
@@ -132,15 +123,15 @@ main {
   .container {
     padding: 0 24px;
   }
-  
+
   main {
     padding-top: 75px;
   }
-  
+
   .section {
     padding: 80px 0;
   }
-  
+
   .section-small {
     padding: 60px 0;
   }
@@ -151,19 +142,19 @@ main {
   .container {
     padding: 0 16px;
   }
-  
+
   main {
     padding-top: 70px;
   }
-  
+
   .section {
     padding: 60px 0;
   }
-  
+
   .section-small {
     padding: 40px 0;
   }
-  
+
   body {
     font-size: 15px;
   }
@@ -174,19 +165,19 @@ main {
   .container {
     padding: 0 12px;
   }
-  
+
   main {
     padding-top: 65px;
   }
-  
+
   body {
     font-size: 14px;
   }
-  
+
   .section {
     padding: 50px 0;
   }
-  
+
   .section-small {
     padding: 30px 0;
   }
@@ -194,17 +185,12 @@ main {
 
 /* Footer styles */
 .footer {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(29, 29, 31, 0.95);
   backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 40px 0;
   margin-top: 80px;
   transition: all 0.3s ease;
-}
-
-.dark-mode .footer {
-  background: rgba(29, 29, 31, 0.95);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
@@ -216,12 +202,8 @@ main {
 
 .footer-content p {
   margin: 0;
-  color: #6b7280;
-  font-size: 14px;
-}
-
-.dark-mode .footer-content p {
   color: #9ca3af;
+  font-size: 14px;
 }
 
 /* Utility classes */
@@ -244,28 +226,21 @@ main {
 .mt-8 {
   margin-top: 2rem;
 }
+
 button {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 a {
-  color: #0071e3;
-  transition: color 0.3s ease;
-}
-
-.dark-mode a {
   color: #409cff;
+  transition: color 0.3s ease;
 }
 
 .section-divider {
   height: 1px;
-  background-color: #d2d2d7;
+  background-color: #424245;
   margin: 40px 0;
   transition: background-color 0.3s ease;
-}
-
-.dark-mode .section-divider {
-  background-color: #424245;
 }
 
 /* Animaciones globales */
@@ -274,6 +249,7 @@ a {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -294,7 +270,8 @@ html {
   max-width: 100%;
 }
 
-img, video {
+img,
+video {
   height: auto;
   max-width: 100%;
 }

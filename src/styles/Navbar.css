@@ -1,5 +1,5 @@
 .navbar {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(29, 29, 31, 0.85);
   backdrop-filter: saturate(180%) blur(25px);
   position: fixed;
   top: 0;
@@ -11,21 +11,11 @@
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding: 16px 0;
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   overflow-x: hidden;
 }
 
-.dark-mode .navbar {
-  background: rgba(29, 29, 31, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .navbar.scrolled {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  background: rgba(255, 255, 255, 0.95);
-}
-
-.dark-mode .navbar.scrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   background: rgba(29, 29, 31, 0.95);
 }
@@ -94,7 +84,7 @@
 
 /* Estilos base para nav-item */
 .nav-item {
-  color: #1d1d1f;
+  color: #f5f5f7;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -122,10 +112,6 @@
   width: 80%;
 }
 
-.dark-mode .nav-item {
-  color: #f5f5f7;
-}
-
 .nav-item:hover {
   opacity: 1;
   background: rgba(102, 126, 234, 0.1);
@@ -139,7 +125,7 @@
 }
 
 .nav-icon {
-  color: #1d1d1f;
+  color: #f5f5f7;
   font-size: 20px;
   opacity: 0.8;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -149,10 +135,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.dark-mode .nav-icon {
-  color: #f5f5f7;
 }
 
 .nav-icon:hover {
@@ -167,13 +149,9 @@
   background: none;
   border: none;
   font-size: 18px;
-  color: #1d1d1f;
+  color: #f5f5f7;
   cursor: pointer;
   transition: color 0.3s ease;
-}
-
-.dark-mode .mobile-menu-toggle {
-  color: #f5f5f7;
 }
 
 /* Web-first responsive design */
@@ -186,25 +164,25 @@
   .navbar {
     padding: 18px 0;
   }
-  
+
   .navbar-container {
     max-width: 1400px;
     padding: 0 40px;
   }
-  
+
   .navbar-logo {
     font-size: 32px;
   }
-  
+
   .nav-item {
     font-size: 18px;
     padding: 10px 20px;
   }
-  
+
   .nav-icons {
     gap: 24px;
   }
-  
+
   .nav-icon {
     font-size: 22px;
     padding: 10px;
@@ -217,11 +195,11 @@
     max-width: 1200px;
     padding: 0 32px;
   }
-  
+
   .navbar-logo {
     font-size: 30px;
   }
-  
+
   .nav-item {
     font-size: 17px;
   }
@@ -233,11 +211,11 @@
     max-width: 1000px;
     padding: 0 28px;
   }
-  
+
   .navbar-logo {
     font-size: 28px;
   }
-  
+
   .nav-menu {
     gap: 32px;
   }
@@ -248,24 +226,24 @@
   .navbar {
     padding: 14px 0;
   }
-  
+
   .navbar-container {
     padding: 0 24px;
   }
-  
+
   .navbar-logo {
     font-size: 26px;
   }
-  
+
   .nav-menu {
     gap: 28px;
   }
-  
+
   .nav-item {
     font-size: 15px;
     padding: 6px 12px;
   }
-  
+
   .nav-icon {
     font-size: 18px;
     padding: 6px;
@@ -277,28 +255,28 @@
   .navbar {
     padding: 12px 0;
   }
-  
+
   .navbar-container {
     padding: 0 16px;
   }
-  
+
   .navbar-logo {
     font-size: 24px;
   }
-  
+
   .nav-menu {
     gap: 20px;
   }
-  
+
   .nav-item {
     font-size: 14px;
     padding: 6px 10px;
   }
-  
+
   .nav-icons {
     gap: 16px;
   }
-  
+
   .nav-icon {
     font-size: 18px;
   }
@@ -309,28 +287,28 @@
   .navbar {
     padding: 10px 0;
   }
-  
+
   .navbar-container {
     padding: 0 12px;
   }
-  
+
   .navbar-logo {
     font-size: 22px;
   }
-  
+
   .nav-menu {
     gap: 16px;
   }
-  
+
   .nav-item {
     font-size: 13px;
     padding: 4px 8px;
   }
-  
+
   .nav-icons {
     gap: 12px;
   }
-  
+
   .nav-icon {
     font-size: 16px;
     padding: 4px;
@@ -344,7 +322,7 @@
   .nav-item.priority-low {
     display: none;
   }
-  
+
   .nav-menu {
     gap: 32px;
   }
@@ -355,7 +333,7 @@
   .nav-item.priority-medium {
     display: none;
   }
-  
+
   .nav-menu {
     gap: 28px;
   }
@@ -366,7 +344,7 @@
   .nav-item.priority-high:not(.priority-essential) {
     display: none;
   }
-  
+
   .nav-menu {
     gap: 24px;
   }
@@ -377,15 +355,15 @@
   .nav-menu {
     display: none;
   }
-  
+
   .navbar-container {
     justify-content: space-between;
   }
-  
+
   .nav-icons {
     gap: 16px;
   }
-  
+
   /* Solo mostrar iconos esenciales */
   .nav-icon:not(.essential) {
     display: none;
@@ -397,11 +375,11 @@
   .navbar-logo {
     font-size: 20px;
   }
-  
+
   .nav-icons {
     gap: 12px;
   }
-  
+
   .nav-icon.essential {
     font-size: 16px;
     padding: 6px;
