@@ -14,7 +14,7 @@ const ProductList = () => {
             setTimeout(() => {
                 setProducts(allProducts);
                 setLoading(false);
-            }, 500) // Un pequeño retraso para simular la carga
+            }) // Se puede agregar un pequeño retraso para simular la carga
         };
 
         fetchProducts();
