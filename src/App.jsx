@@ -1,36 +1,33 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProductGrid from './components/ProductGrid';
-import { featuredProducts, newProducts } from './data/ProductsInventory.js';
+import Home from './pages/Home';
+import ProductList from './pages/ProductList';
+import ProductDetail from './pages/ProductDetail';
+import Cart from './pages/Cart';
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-                <ProductGrid title="Productos Destacados" products={featuredProducts} />
-                <ProductGrid title="Nuevos Lanzamientos" products={newProducts} />
-              </>
-            } />
-            {/* Aquí irían más rutas */}
-          </Routes>
-        </main>
-        <footer className="footer">
-          <div className="footer-content">
-            <p>&copy; 2025 CubrikStore. Todos los derechos reservados.</p>
-            <p>Javier Hernández Montiel</p>
-          </div>
-        </footer>
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/productos" element={<ProductList />} />
+          <Route path="/producto/:productId" element={<ProductDetail />} />
+          <Route path="/carrito" element={<Cart />} />
+          {/* Aquí irían más rutas */}
+          <Route path="*" element={<h1>404: Página No Encontrada</h1>} />
+        </Routes>
+      </main>
+      <footer className="footer">
+        <div className="footer-content">
+          <p>&copy; 2025 CubrikStore. Todos los derechos reservados.</p>
+          <p>Javier Hernández Montiel</p>
+        </div>
+      </footer>
+    </div>
   );
 }
 
