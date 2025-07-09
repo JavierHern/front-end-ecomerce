@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
         <div className="hero-image-container">
           <img
-            src="/public/images/cubo3x3.png"
+            src="/images/cubo3x3.png"
             alt="CubeX Pro Rubik's Cube"
             className="hero-image"
           />
