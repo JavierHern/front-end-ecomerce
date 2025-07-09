@@ -22,9 +22,9 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-image-container">
-          <img 
-            src="https://placehold.co/500x500/667eea/ffffff?text=CubeX+Pro" 
-            alt="CubeX Pro Rubik's Cube" 
+          <img
+            src="/public/images/cubo3x3.png"
+            alt="CubeX Pro Rubik's Cube"
             className="hero-image"
           />
         </div>

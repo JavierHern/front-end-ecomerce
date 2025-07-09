@@ -8,7 +8,7 @@ const featuredProducts = [
         price: 29.99,
         colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#ecf0f1'
         ],
-        image: '/cubo3x3.png'
+        image: '/public/images/cubo3x3.png'
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const featuredProducts = [
         price: 24.99,
         colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f'
         ],
-        image: 'https://placehold.co/600x400?text=Cubo+Pyramix'
+        image: '/public/images/pyra.png'
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const featuredProducts = [
         price: 39.99,
         colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#ecf0f1'
         ],
-        image: 'https://placehold.co/600x400?text=Cubo+Megamix'
+        image: '/public/images/mega.png'
     },
     {
         id: 4,
@@ -35,7 +35,7 @@ const featuredProducts = [
         price: 34.99,
         colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#ecf0f1'
         ],
-        image: 'https://placehold.co/600x400?text=Cubo+4x4'
+        image: '/public/images/cubo4x4.png'
     }
 ];
 
@@ -46,7 +46,7 @@ const newProducts = [
         category: 'Edición limitada',
         price: 49.99,
         colors: ['#34495e', '#ecf0f1', '#95a5a6'],
-        image: 'https://placehold.co/600x400?text=Cubo+3x3-Air'
+        image: '/public/images/cuboair3x3.png'
     },
     {
         id: 6,
@@ -54,15 +54,15 @@ const newProducts = [
         category: 'Cubo de bolsillo',
         price: 19.99,
         colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#ecf0f1'],
-        image: 'https://placehold.co/600x400?text=Cubo+2x2'
+        image: '/public/images/cubo2x2.png'
     },
     {
         id: 7,
-        name: 'SkewbX Pro',
-        category: 'Skewb',
+        name: 'SquareX Pro',
+        category: 'Square',
         price: 27.99,
         colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f'],
-        image: 'https://placehold.co/600x400?text=Cubo+Skewb'
+        image: '/public/images/skewb.png'
     },
     {
         id: 8,
@@ -70,7 +70,7 @@ const newProducts = [
         category: 'Avanzado',
         price: 44.99,
         colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#ecf0f1'],
-        image: 'https://placehold.co/600x400?text=Cubo+5x5'
+        image: '/public/images/cubo5x5.png'
     }
 ];
 
