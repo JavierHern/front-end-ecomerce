@@ -7,7 +7,7 @@ export const useCart = () => {
             const storedCart = localStorage.getItem('cart');
             return storedCart ? JSON.parse(storedCart) : [];
         } catch (error) {
-            console.log("Error al parseal el carrito de localStorage", error);
+            console.log("Error al parsear el carrito de localStorage", error);
             return [];
         }
     });
