@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ThemeToggle from './ThemeToggle';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -14,7 +13,7 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -33,7 +32,6 @@ const Navbar = () => {
           <Link to="/soporte" className="nav-item priority-low">Soporte</Link>
         </div>
         <div className="nav-icons">
-          <ThemeToggle />
           <Link to="/buscar" className="nav-icon essential">
             <i className="fas fa-search"></i>
           </Link>

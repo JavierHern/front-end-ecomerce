@@ -4,7 +4,7 @@
   justify-content: center;
   padding: 120px 0;
   text-align: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
   overflow: hidden;
   position: relative;
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -25,10 +25,6 @@
   background-size: cover;
   background-position: bottom;
   pointer-events: none;
-}
-
-.dark-mode .hero {
-  background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
 }
 
 .hero .container {
@@ -160,7 +156,7 @@
   max-width: 500px;
   max-height: 500px;
   object-fit: contain;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform-origin: center center;
   animation: float 6s ease-in-out infinite;
@@ -170,18 +166,16 @@
   transform: scale(1.05) rotate(2deg);
 }
 
-.dark-mode .hero-image {
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
-}
-
 /* Animación flotante para la imagen */
 @keyframes float {
   0% {
     transform: translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translateY(-10px) rotate(1deg);
   }
+
   100% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -207,24 +201,24 @@
     padding: 140px 0;
     min-height: 100vh;
   }
-  
+
   .hero .container {
     gap: 80px;
     max-width: 1400px;
   }
-  
+
   .hero-title {
     font-size: 72px;
   }
-  
+
   .hero-subtitle {
     font-size: 36px;
   }
-  
+
   .hero-description {
     font-size: 22px;
   }
-  
+
   .hero-image {
     max-width: 600px;
     max-height: 600px;
@@ -236,19 +230,19 @@
   .hero {
     padding: 120px 0;
   }
-  
+
   .hero .container {
     gap: 60px;
   }
-  
+
   .hero-title {
     font-size: 64px;
   }
-  
+
   .hero-subtitle {
     font-size: 32px;
   }
-  
+
   .hero-description {
     font-size: 20px;
   }
@@ -259,23 +253,23 @@
   .hero {
     padding: 100px 0;
   }
-  
+
   .hero .container {
     gap: 50px;
   }
-  
+
   .hero-title {
     font-size: 56px;
   }
-  
+
   .hero-subtitle {
     font-size: 28px;
   }
-  
+
   .hero-description {
     font-size: 18px;
   }
-  
+
   .hero-image {
     max-width: 450px;
     max-height: 450px;
@@ -288,35 +282,35 @@
     padding: 100px 0;
     min-height: 90vh;
   }
-  
+
   .hero .container {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
   }
-  
+
   .hero-content {
     text-align: center;
     order: 1;
   }
-  
+
   .hero-image-container {
     order: 2;
     min-height: 350px;
   }
-  
+
   .hero-title {
     font-size: 48px;
   }
-  
+
   .hero-subtitle {
     font-size: 26px;
   }
-  
+
   .hero-description {
     font-size: 17px;
   }
-  
+
   .hero-image {
     max-width: 400px;
     max-height: 400px;
@@ -329,38 +323,38 @@
     padding: 80px 0;
     min-height: 85vh;
   }
-  
+
   .hero .container {
     grid-template-columns: 1fr;
     gap: 30px;
     text-align: center;
   }
-  
+
   .hero-content {
     text-align: center;
     order: 1;
   }
-  
+
   .hero-image-container {
     order: 2;
     min-height: 280px;
   }
-  
+
   .hero-title {
     font-size: 42px;
     margin-bottom: 12px;
   }
-  
+
   .hero-subtitle {
     font-size: 24px;
     margin-bottom: 20px;
   }
-  
+
   .hero-description {
     font-size: 16px;
     margin-bottom: 32px;
   }
-  
+
   .hero-image {
     max-width: 320px;
     max-height: 320px;
@@ -374,51 +368,51 @@
     padding: 60px 0;
     min-height: 80vh;
   }
-  
+
   .hero .container {
     grid-template-columns: 1fr;
     gap: 25px;
     text-align: center;
   }
-  
+
   .hero-content {
     text-align: center;
     order: 1;
   }
-  
+
   .hero-image-container {
     order: 2;
     min-height: 240px;
   }
-  
+
   .hero-title {
     font-size: 36px;
     margin-bottom: 10px;
   }
-  
+
   .hero-subtitle {
     font-size: 20px;
     margin-bottom: 16px;
   }
-  
+
   .hero-description {
     font-size: 14px;
     margin-bottom: 28px;
   }
-  
+
   .hero-links {
     flex-direction: column;
     align-items: center;
     gap: 12px;
   }
-  
+
   .hero-link {
     width: 100%;
     max-width: 240px;
     padding: 12px 24px;
     font-size: 15px;
   }
-  
+
   .hero-image {
     max-width: 280px;
     max-height: 280px;
