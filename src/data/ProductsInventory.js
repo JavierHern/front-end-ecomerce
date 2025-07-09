@@ -8,7 +8,7 @@ const featuredProducts = [
         price: 29.99,
         colors: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#ecf0f1'
         ],
-        image: 'https://placehold.co/600x400?text=Cubo+3x3'
+        image: '/cubo3x3.png'
     },
     {
         id: 2,
