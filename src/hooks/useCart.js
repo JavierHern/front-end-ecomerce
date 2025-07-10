@@ -21,9 +21,13 @@ export const useCart = () => {
         setCart(prevCart => {
             const existingProductIndex = prevCart.findIndex(item => item.id === product.id);
             if (existingProductIndex !== -1) {
-                // Si el producto ya existe, incrementamos la cantidad
-                const updatedCart = [...prevCart];
-                updatedCart[existingProductIndex].quantity += 1;
+                // Si el producto ya existe, creamos un nuevo array para no mutar el estado
+                const updatedCart = prevCart.map((item, index) => {
+                    if (index === existingProductIndex) {
+                        return { ...item, quantity: item.quantity + 1 };
+                    }
+                    return item;
+                });
                 return updatedCart;
             } else {
                 // Si es un producto nuevo, lo añadimos con cantidad 1
