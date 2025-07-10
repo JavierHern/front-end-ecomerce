@@ -16,6 +16,7 @@ export const allProducts = [
         category: 'Pirámide',
         price: 24.99,
         image: '/images/pyra.png',
+        description: "añlsdfjñalksdjf añsldfjañldskjf ñalskdjfñlaksdjf asdfasdfñlkjañlsdfjkñalskdjfñlj añlsdkjfñlakdjsfl",
         isFeatured: true,
         isNew: false,
     },
