@@ -5,8 +5,9 @@ import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
-import './App.css';
+import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
+import './App.css';
 
 function App() {
   return (
@@ -22,12 +23,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <footer className="footer">
-        <div className="footer-content">
-          <p>&copy; 2025 CubrikStore. Todos los derechos reservados.</p>
-          <p>Javier Hernández Montiel</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
