@@ -1,4 +1,5 @@
 import React from "react";
+import ReturnHome from "../components/ReturnHome";
 import { Link } from 'react-router-dom';
 import { useCartContext } from "../context/CartContext";
 import '../styles/Cart.css'
@@ -12,9 +13,7 @@ const Cart = () => {
             <div className="cart-empty">
                 <h2>Tu carrito está vacío</h2>
                 <p>Parece que aún no has añadido ningún producto.</p>
-                <Link to="/productos" className="btn-primary">
-                    Ver Productos
-                </Link>
+                <ReturnHome link={"Ver Productos"} />
             </div>
         );
     }
@@ -53,7 +52,7 @@ const Cart = () => {
                         <span>Total</span>
                         <span>${cartTotal}</span>
                     </div>
-                    <button className="btn-primary checkout-btn">Proceder al Pago</button>
+                    <button className="checkout-btn">Proceder al Pago</button>
                     <button onClick={clearCart} className="btn-secondary clear-cart-btn">
                         Vaciar Carrito
                     </button>

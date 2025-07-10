@@ -1,16 +1,17 @@
 // Datos de ejemplo
 export const allProducts = [
     {
-        id: 1,
+        id: "1",
         name: 'CubeX Pro 3x3',
         category: 'Cubo de velocidad',
         price: 29.99,
         image: '/images/cubo3x3.png',
+        description: "Cubo 3x3,alsñdfjañlksdjfñlakjsdfñlkj alksdfjñlakjsdf ñalksdjfñlakjsdfñlajsd añlskdjfñlaksdjf alñskdjfñalksdjfñlj",
         isFeatured: true,
         isNew: false,
     },
     {
-        id: 2,
+        id: "2",
         name: 'PyraX Speed',
         category: 'Pirámide',
         price: 24.99,
@@ -19,7 +20,7 @@ export const allProducts = [
         isNew: false,
     },
     {
-        id: 3,
+        id: "3",
         name: 'MegaX Ultimate',
         category: 'Megaminx',
         price: 39.99,
@@ -28,7 +29,7 @@ export const allProducts = [
         isNew: false,
     },
     {
-        id: 4,
+        id: "4",
         name: 'CubeX 4x4',
         category: 'Cubo de velocidad',
         price: 34.99,
@@ -37,7 +38,7 @@ export const allProducts = [
         isNew: false,
     },
     {
-        id: 5,
+        id: "5",
         name: 'CubeX Air',
         category: 'Edición limitada',
         price: 49.99,
@@ -46,7 +47,7 @@ export const allProducts = [
         isNew: true,
     },
     {
-        id: 6,
+        id: "6",
         name: 'CubeX Mini 2x2',
         category: 'Cubo de bolsillo',
         price: 19.99,
@@ -55,7 +56,7 @@ export const allProducts = [
         isNew: true,
     },
     {
-        id: 7,
+        id: "7",
         name: 'SkewbX Pro',
         category: 'Skewb',
         price: 27.99,
@@ -64,7 +65,7 @@ export const allProducts = [
         isNew: true,
     },
     {
-        id: 8,
+        id: "8",
         name: 'CubeX 5x5 Master',
         category: 'Avanzado',
         price: 44.99,

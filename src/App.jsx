@@ -6,6 +6,7 @@ import ProductList from './pages/ProductList';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import './App.css';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/producto/:productId" element={<ProductDetail />} />
           <Route path="/carrito" element={<Cart />} />
           {/* Aquí irían más rutas */}
-          <Route path="*" element={<h1>404: Página No Encontrada</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <footer className="footer">
