@@ -52,10 +52,12 @@ const Cart = () => {
                         <span>Total</span>
                         <span>${cartTotal}</span>
                     </div>
-                    <button className="checkout-btn">Proceder al Pago</button>
-                    <button onClick={clearCart} className="btn-secondary clear-cart-btn">
-                        Vaciar Carrito
-                    </button>
+                    <div className="cart-buttons">
+                        <button className="checkout-btn">Proceder al Pago</button>
+                        <button onClick={clearCart} className="clear-cart-btn">
+                            Vaciar Carrito
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

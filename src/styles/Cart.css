@@ -104,15 +104,23 @@
     border-top: 1px solid #3a3a3c;
 }
 
+.cart-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .checkout-btn {
     width: 100%;
     padding: 15px;
     font-size: 1.1rem;
+    border: none;
 }
 
 .clear-cart-btn {
-    width: 100%;
+    width: 80%;
     margin-top: 10px;
+    border: none;
 }
 
 /* Estilos para el carrito vacío */
