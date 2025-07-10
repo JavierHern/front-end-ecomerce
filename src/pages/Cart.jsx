@@ -28,7 +28,7 @@ const Cart = () => {
                             <img src={item.image} alt={item.name} className="cart-item-image" />
                             <div className="cart-item-details">
                                 <Link to={`/producto/${item.id}`} className="cart-item-name">{item.name}</Link>
-                                <p className="cart-item-price">${item.price.toFixed(2)}</p>
+                                <p className="cart-item-price">${(item.price || 0).toFixed(2)}</p>
                                 <p className="cart-item-quantity">Cantidad: {item.quantity}</p>
                             </div>
                             <button onClick={() => removeFromCart(item.id)} className="cart-item-remove">

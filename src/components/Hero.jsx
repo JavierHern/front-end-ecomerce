@@ -13,10 +13,10 @@ const Hero = () => {
             Nuestro nuevo cubo magnético de alta precisión con tecnología avanzada para profesionales y entusiastas.
           </p>
           <div className="hero-links">
-            <Link to="/productos/cubex-pro" className="hero-link primary">
+            <Link to="/producto/1" className="hero-link primary">
               Comprar Ahora
             </Link>
-            <Link to="/productos/cubex-pro/specs" className="hero-link secondary">
+            <Link to="/producto/1" className="hero-link secondary">
               Más información
             </Link>
           </div>

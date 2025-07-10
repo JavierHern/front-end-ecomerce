@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { allProducts } from '../data/ProductsInventory';
-import { useCartContext } from '../context/CartContext';
+import AddCartBtn from '../components/AddCartBnt';
 import '../styles/ProductDetail.css';
 
 const ProductDetail = () => {
     const { productId } = useParams(); // Hook para leer los parámetros de la URL
-    const { addToCart } = useCartContext();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -51,9 +50,7 @@ const ProductDetail = () => {
                     <p className="product-detail-description">
                         {product.description}
                     </p>
-                    <button onClick={() => addToCart(product)} className="add-to-cart-detail-btn">
-                        Añadir al Carrito
-                    </button>
+                    <AddCartBtn product={product} />
                     <Link to="/productos" className="back-store">
                         Volver a la tienda
                     </Link>
