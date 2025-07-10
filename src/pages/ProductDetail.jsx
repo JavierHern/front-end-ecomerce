@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { allProducts } from '../data/ProductsInventory';
 import AddCartBtn from '../components/AddCartBnt';
+import CubeImage from '../components/CubeImage';
 import '../styles/ProductDetail.css';
 
 const ProductDetail = () => {
@@ -41,7 +42,7 @@ const ProductDetail = () => {
         <div className="container product-detail-container">
             <div className="product-detail-grid">
                 <div className="product-detail-image-container">
-                    <img src={product.image} alt={product.name} className="product-detail-image" />
+                    <CubeImage src={product.image} alt={product.name} />
                 </div>
                 <div className="product-detail-info">
                     <h1 className="product-detail-name">{product.name}</h1>
