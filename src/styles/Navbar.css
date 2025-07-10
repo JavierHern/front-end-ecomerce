@@ -1,6 +1,5 @@
 .navbar {
-  background: rgba(29, 29, 31, 0.85);
-  backdrop-filter: saturate(180%) blur(25px);
+
   position: fixed;
   top: 0;
   left: 0;
@@ -15,9 +14,17 @@
   overflow-x: hidden;
 }
 
-.navbar.scrolled {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  background: rgba(29, 29, 31, 0.95);
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 29, 31, 0.85);
+  backdrop-filter: blur(15px);
+  z-index: -1;
+  /* Lo coloca detrás del contenido del navbar (logo, enlaces, etc.) */
 }
 
 .navbar-container {
@@ -63,22 +70,6 @@
 
 .nav-icon.essential {
   /* Iconos esenciales: search, cart, theme toggle */
-  display: flex;
-}
-
-/* Clases para controlar la visibilidad progresiva */
-.nav-item.priority-low {
-  /* Soporte y Accesorios se ocultan primero */
-  display: flex;
-}
-
-.nav-item.priority-medium {
-  /* Novedades se oculta en segundo lugar */
-  display: flex;
-}
-
-.nav-item.priority-high {
-  /* Inicio y Productos se mantienen más tiempo */
   display: flex;
 }
 
@@ -148,10 +139,15 @@
   display: none;
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: 24px;
   color: #f5f5f7;
   cursor: pointer;
   transition: color 0.3s ease;
+  z-index: 1100;
+}
+
+.mobile-menu-toggle:hover {
+  color: #764ba2;
 }
 
 /* Web-first responsive design */
@@ -315,73 +311,91 @@
   }
 }
 
-/* SISTEMA DE OCULTACIÓN PROGRESIVA SEGÚN ANCHO DE VENTANA */
+/* ================================================================== */
+/*      NUEVO SISTEMA DE MENÚ DESPLEGABLE PARA MÓVILES (HAMBURGUESA)    */
+/* ================================================================== */
 
-/* Paso 1: Ocultar elementos de baja prioridad en pantallas medianas */
-@media (max-width: 1100px) {
-  .nav-item.priority-low {
-    display: none;
-  }
-
-  .nav-menu {
-    gap: 32px;
-  }
-}
-
-/* Paso 2: Ocultar elementos de prioridad media */
+/* Punto de quiebre para cambiar a menú de hamburguesa (ej. 950px) */
 @media (max-width: 950px) {
-  .nav-item.priority-medium {
-    display: none;
-  }
-
   .nav-menu {
-    gap: 28px;
-  }
-}
+    /* Convertir en un overlay de pantalla completa */
+    position: fixed;
+    /* Fijo a la ventana */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* 100% del ancho de la ventana */
+    height: 100vh;
+    /* 100% de la altura de la ventana */
 
-/* Paso 3: Ocultar más elementos, mantener solo esenciales */
-@media (max-width: 800px) {
-  .nav-item.priority-high:not(.priority-essential) {
-    display: none;
-  }
+    /* Centrar el contenido vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Espacio entre elementos del menú */
 
-  .nav-menu {
-    gap: 24px;
-  }
-}
+    background: rgba(29, 29, 31, 0.95);
+    backdrop-filter: blur(15px);
+    z-index: 1050;
+    /* Por encima del navbar (1000) pero debajo del botón de cierre (1100) */
 
-/* Paso 4: Mantener solo logo y iconos esenciales */
-@media (max-width: 650px) {
-  .nav-menu {
-    display: none;
-  }
+    /* Transición para la aparición (ahora solo con opacidad) */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
 
-  .navbar-container {
-    justify-content: space-between;
-  }
-
-  .nav-icons {
-    gap: 16px;
-  }
-
-  /* Solo mostrar iconos esenciales */
-  .nav-icon:not(.essential) {
-    display: none;
-  }
-}
-
-/* Paso 5: Versión ultra compacta para móviles muy pequeños */
-@media (max-width: 400px) {
-  .navbar-logo {
-    font-size: 20px;
   }
 
-  .nav-icons {
-    gap: 12px;
+  .nav-menu.active {
+    /* Mostrar el menú cuando tenga la clase 'active' */
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  .nav-icon.essential {
-    font-size: 16px;
-    padding: 6px;
+  .nav-item {
+    /* Ajustar items para el menú vertical */
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    /* Hacemos la fuente más grande para el modo overlay */
+    transform: translateY(20px);
+    /* Pequeño efecto de entrada */
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  /* Efecto de aparición escalonada para los items del menú */
+  .nav-menu.active .nav-item {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-menu.active .nav-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .nav-menu.active .nav-item:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+
+  .nav-menu.active .nav-item:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+
+  .nav-menu.active .nav-item:nth-child(4) {
+    transition-delay: 0.25s;
+  }
+
+
+  .nav-item:hover {
+    background: rgba(102, 126, 234, 0.15);
+  }
+
+  .mobile-menu-toggle {
+    /* Mostrar el botón de hamburguesa */
+    display: block;
   }
 }

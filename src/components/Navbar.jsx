@@ -1,38 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext'; // Importar el hook
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   const { cartCount } = useCartContext(); // Obtener la cantidad del carrito
-  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+  // Función para abrir/cerrar el menú móvil
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Función para cerrar el menú al hacer clic en un enlace
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          CubrikStore
-        </Link>
-        <div className="nav-menu">
-          <Link to="/" className="nav-item priority-high priority-essential">Inicio</Link>
-          <Link to="/productos" className="nav-item priority-high">Productos</Link>
-          <Link to="/novedades" className="nav-item priority-medium">Novedades</Link>
-          <Link to="/accesorios" className="nav-item priority-low">Accesorios</Link>
-          <Link to="/soporte" className="nav-item priority-low">Soporte</Link>
+        <button className="mobile-menu-toggle" onClick={handleMenuToggle}>
+          <i className={isMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
+        </button>
+
+        <Link to="/" className="navbar-logo">CubrikStore</Link>
+
+        <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+          <Link to="/" className="nav-item" onClick={closeMobileMenu}>Inicio</Link>
+          <Link to="/productos" className="nav-item" onClick={closeMobileMenu}>Productos</Link>
+          <Link to="/accesorios" className="nav-item" onClick={closeMobileMenu}>Accesorios</Link>
+          <Link to="/contacto" className="nav-item" onClick={closeMobileMenu}>Contacto</Link>
         </div>
+
         <div className="nav-icons">
           <Link to="/buscar" className="nav-icon essential">
             <i className="fas fa-search"></i>
@@ -42,6 +42,7 @@ const Navbar = () => {
             {cartCount > 0 && <span className='cart-badge'>{cartCount}</span>}
           </Link>
         </div>
+
       </div>
     </nav>
   );
