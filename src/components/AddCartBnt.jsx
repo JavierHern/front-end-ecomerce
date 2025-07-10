@@ -1,7 +1,8 @@
 import { useCartContext } from '../context/CartContext'; // Importamos el hook
+import { allProducts } from '../data/ProductsInventory';
 import '../styles/AddCartBtn.css'
 
-const AddCartBtn = ({ product }) => {
+const AddCartBtn = ({ product = allProducts[0] }) => {
     const { addToCart } = useCartContext(); // Obtenemos la funcion addToCart
 
     const handleAddToCart = (e) => {

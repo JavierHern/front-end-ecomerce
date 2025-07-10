@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AddCartBtn from './AddCartBnt';
 import '../styles/Hero.css';
 
 const Hero = () => {
@@ -13,9 +14,9 @@ const Hero = () => {
             Nuestro nuevo cubo magnético de alta precisión con tecnología avanzada para profesionales y entusiastas.
           </p>
           <div className="hero-links">
-            <Link to="/producto/1" className="hero-link primary">
-              Comprar Ahora
-            </Link>
+            <div className='hero-link primary'>
+              <AddCartBtn />
+            </div>
             <Link to="/producto/1" className="hero-link secondary">
               Más información
             </Link>
