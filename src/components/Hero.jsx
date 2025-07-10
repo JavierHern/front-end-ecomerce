@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="hero">
       <div className="container">
         <div className="hero-content">
-          <h1 className="hero-title">CubeX Pro</h1>
+          <h1 className="hero-title">CubeX 3x3</h1>
           <h2 className="hero-subtitle">Redefine tu experiencia de speedcubing.</h2>
           <p className="hero-description">
             Nuestro nuevo cubo magnético de alta precisión con tecnología avanzada para profesionales y entusiastas.

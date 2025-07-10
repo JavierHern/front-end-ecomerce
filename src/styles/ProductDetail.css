@@ -54,9 +54,12 @@
 
 .product-detail-description {
     font-size: 1.1rem;
+    text-align: justify;
     line-height: 1.6;
     color: #d1d1d6;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin: 0 30px 30px;
+
 }
 
 .add-to-cart-detail-btn {
