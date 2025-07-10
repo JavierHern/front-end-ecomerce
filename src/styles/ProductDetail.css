@@ -1,5 +1,5 @@
 .product-detail-container {
-    display: flex;
+    display: grid;
     padding: 60px 0;
     min-height: 80vh;
     align-items: center;
