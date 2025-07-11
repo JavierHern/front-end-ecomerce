@@ -50,7 +50,7 @@ const Search = ({ onClose }) => {
     // Manejar envío del formulario
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (searchTerm.trim()) {
+        if (searchTerm.trim() && searchResults.length > 0) {
             navigate(`/buscar?q=${encodeURIComponent(searchTerm)}`);
             onClose();
         }
@@ -121,7 +121,7 @@ const Search = ({ onClose }) => {
                     <div className="search-suggestions">
                         <h4>Búsquedas populares</h4>
                         <div className="search-tags">
-                            {['Speedcube', 'Gan', 'MoYu', 'Pyraminx', 'Megaminx', 'Mirror Cube'].map((tag) => (
+                            {['Speedcube', 'Cubo', 'Pyraminx', 'Megaminx'].map((tag) => (
                                 <button
                                     key={tag}
                                     className="search-tag"

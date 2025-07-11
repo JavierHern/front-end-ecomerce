@@ -13,7 +13,7 @@ export const allProducts = [
     {
         id: "2",
         name: 'PyraX Speed',
-        category: 'Pirámide',
+        category: 'Pyraminx, Pirámide',
         price: 24.99,
         image: '/images/pyra.png',
         description: "Atrévete con un desafío diferente. El PyraX ofrece una experiencia de resolución única con su forma tetraédrica. Su mecanismo de alta calidad asegura giros rápidos y precisos en cada movimiento.",
@@ -43,7 +43,7 @@ export const allProducts = [
     {
         id: "5",
         name: 'CubeX Pro',
-        category: 'Edición limitada',
+        category: 'Cubo Edición limitada',
         price: 49.99,
         image: '/images/cuboair3x3.png',
         description: "La joya de la corona. El CubeX Pro es una edición especial ultraligera con un mecanismo magnético avanzado. Ofrece una sensación de giro inigualable y un control superior para los cubers más exigentes.",
@@ -73,7 +73,7 @@ export const allProducts = [
     {
         id: "8",
         name: 'CubeX 5x5 Master',
-        category: 'Avanzado',
+        category: 'Cubo Avanzado',
         price: 44.99,
         image: '/images/cubo5x5.png',
         description: "Para los verdaderos maestros del cubo. El 5x5 aumenta la complejidad con más capas y piezas que alinear. Requiere paciencia, estrategia y un dominio de algoritmos avanzados.",
