@@ -41,14 +41,14 @@ const Navbar = () => {
           </div>
 
           <div className="nav-icons">
-            <button className="nav-icon" onClick={handleSearchToggle}>
+            <button className="nav-icon search" onClick={handleSearchToggle}>
               <i className="fas fa-search"></i>
             </button>
-            {isSearchOpen && <Search onClose={() => setIsSearchOpen(false)} />}
             <CartIcon />
           </div>
         </div>
       </nav>
+      {isSearchOpen && <Search onClose={() => setIsSearchOpen(false)} />}
 
     </>
   );

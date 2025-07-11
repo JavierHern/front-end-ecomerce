@@ -73,6 +73,16 @@
   display: flex;
 }
 
+.nav-icon.search {
+  /* Iconos esenciales: search, cart, theme toggle */
+  background: none;
+}
+
+.nav-icon.search:hover {
+  /* Iconos esenciales: search, cart, theme toggle */
+  color: #764ba2;
+}
+
 /* Estilos base para nav-item */
 .nav-item {
   color: #f5f5f7;

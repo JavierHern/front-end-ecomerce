@@ -48,8 +48,8 @@
 
 .search-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: -15px;
+    right: -15px;
     background: none;
     border: none;
     font-size: 24px;
