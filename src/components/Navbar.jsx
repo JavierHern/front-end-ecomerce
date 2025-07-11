@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { useCartContext } from '../context/CartContext'; // Importar el hook
+import { Link } from 'react-router-dom';
+import CartIcon from './CartIcon';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
-  const { cartCount } = useCartContext(); // Obtener la cantidad del carrito
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Función para abrir/cerrar el menú móvil
@@ -37,10 +37,7 @@ const Navbar = () => {
           <Link to="/buscar" className="nav-icon essential">
             <i className="fas fa-search"></i>
           </Link>
-          <Link to="/carrito" className="nav-icon essential">
-            <i className="fas fa-shopping-cart"></i>
-            {cartCount > 0 && <span className='cart-badge'>{cartCount}</span>}
-          </Link>
+          <CartIcon />
         </div>
 
       </div>
