@@ -70,7 +70,7 @@ main {
 @media (min-width: 1440px) {
   .container {
     max-width: 1400px;
-    padding: 0 40px;
+    padding: 5vh 40px;
   }
 
   body {
@@ -82,7 +82,7 @@ main {
   }
 
   main {
-    padding-top: 110px;
+    padding-top: 80px;
   }
 }
 
@@ -90,7 +90,7 @@ main {
 @media (min-width: 1200px) and (max-width: 1439px) {
   .container {
     max-width: 1200px;
-    padding: 0 32px;
+    padding: 5vh 32px;
   }
 
   .section {
@@ -98,7 +98,7 @@ main {
   }
 
   main {
-    padding-top: 110px;
+    padding-top: 80px;
   }
 }
 
@@ -106,7 +106,7 @@ main {
 @media (min-width: 1024px) and (max-width: 1199px) {
   .container {
     max-width: 1000px;
-    padding: 0 28px;
+    padding: 5vh 28px;
   }
 
   .section {
@@ -114,18 +114,18 @@ main {
   }
 
   main {
-    padding-top: 110px;
+    padding-top: 80px;
   }
 }
 
 /* Tablet */
 @media (max-width: 1023px) and (min-width: 768px) {
   .container {
-    padding: 0 24px;
+    padding: 5vh 24px;
   }
 
   main {
-    padding-top: 100px;
+    padding-top: 70px;
   }
 
   .section {
@@ -140,11 +140,11 @@ main {
 /* Mobile Large */
 @media (max-width: 767px) and (min-width: 481px) {
   .container {
-    padding: 0 16px;
+    padding: 5vh 16px;
   }
 
   main {
-    padding-top: 90px;
+    padding-top: 60px;
   }
 
   .section {
@@ -163,11 +163,11 @@ main {
 /* Mobile Small */
 @media (max-width: 480px) {
   .container {
-    padding: 0 12px;
+    padding: 5vh 12px;
   }
 
   main {
-    padding-top: 85px;
+    padding-top: 55px;
   }
 
   body {

@@ -302,9 +302,11 @@
   0% {
     transform: translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translateY(-10px) rotate(1deg);
   }
+
   100% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -327,9 +329,17 @@
   }
 
   /* TIPOGRAFÍA ESCALADA */
-  .hero-title { font-size: 72px; }
-  .hero-subtitle { font-size: 36px; }
-  .hero-description { font-size: 22px; }
+  .hero-title {
+    font-size: 72px;
+  }
+
+  .hero-subtitle {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 22px;
+  }
 
   /* IMAGEN ESCALADA */
   .hero-image {
@@ -353,9 +363,17 @@
   }
 
   /* TIPOGRAFÍA */
-  .hero-title { font-size: 64px; }
-  .hero-subtitle { font-size: 32px; }
-  .hero-description { font-size: 20px; }
+  .hero-title {
+    font-size: 64px;
+  }
+
+  .hero-subtitle {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 20px;
+  }
 }
 
 /* ========================================
@@ -373,9 +391,17 @@
   }
 
   /* TIPOGRAFÍA AJUSTADA */
-  .hero-title { font-size: 56px; }
-  .hero-subtitle { font-size: 28px; }
-  .hero-description { font-size: 18px; }
+  .hero-title {
+    font-size: 56px;
+  }
+
+  .hero-subtitle {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
 
   /* IMAGEN AJUSTADA */
   .hero-image {
@@ -413,9 +439,17 @@
   }
 
   /* TIPOGRAFÍA TABLET */
-  .hero-title { font-size: 48px; }
-  .hero-subtitle { font-size: 26px; }
-  .hero-description { font-size: 17px; }
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 26px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
 
   /* IMAGEN TABLET */
   .hero-image {
