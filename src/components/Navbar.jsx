@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import StoreLogo from './StoreLogo';
 import CartIcon from './CartIcon';
 import Search from './Search';
 import '../styles/Navbar-BEM.css';
@@ -31,7 +32,7 @@ const Navbar = () => {
             <i className={isMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
           </button>
 
-          <Link to="/" className="navbar__logo">CubrikStore</Link>
+          <StoreLogo />
 
           <div className={`navbar__menu ${isMenuOpen ? 'navbar__menu--active' : ''}`}>
             <Link to="/" className="navbar__link" onClick={closeMobileMenu}>Inicio</Link>
