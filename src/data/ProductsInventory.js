@@ -3,7 +3,7 @@ export const allProducts = [
     {
         id: "1",
         name: 'CubeX 3x3',
-        category: 'Cubo de velocidad',
+        category: 'Cubo de velocidad, Speedcube',
         price: 29.99,
         image: '/images/cubo3x3.png',
         description: "El clásico reinventado. Este cubo 3x3 está diseñado para la máxima velocidad y rendimiento, con un giro suave y un corte de esquinas excepcional. Perfecto tanto para principiantes como para speedcubers avanzados.",
@@ -13,7 +13,7 @@ export const allProducts = [
     {
         id: "2",
         name: 'PyraX Speed',
-        category: 'Pyraminx, Pirámide',
+        category: 'Pyraminx, Pirámide, Speedcube',
         price: 24.99,
         image: '/images/pyra.png',
         description: "Atrévete con un desafío diferente. El PyraX ofrece una experiencia de resolución única con su forma tetraédrica. Su mecanismo de alta calidad asegura giros rápidos y precisos en cada movimiento.",
@@ -23,7 +23,7 @@ export const allProducts = [
     {
         id: "3",
         name: 'MegaX Ultimate',
-        category: 'Megaminx',
+        category: 'Megaminx, Speedcube',
         price: 39.99,
         image: '/images/mega.png',
         description: "Lleva tus habilidades al siguiente nivel con el MegaX Ultimate. Con 12 caras y 50 piezas móviles, este dodecaedro es el desafío definitivo para los solucionadores de puzzles más dedicados.",
@@ -33,7 +33,7 @@ export const allProducts = [
     {
         id: "4",
         name: 'CubeX 4x4',
-        category: 'Cubo de velocidad',
+        category: 'Cubo de velocidad, Speedcube',
         price: 34.99,
         image: '/images/cubo4x4.png',
         description: "Más grande, más complejo. El cubo 4x4, también conocido como 'La Venganza', añade una nueva capa de dificultad sin centros fijos. Ideal para quienes ya dominan el 3x3 y buscan un nuevo reto.",
@@ -43,7 +43,7 @@ export const allProducts = [
     {
         id: "5",
         name: 'CubeX Pro',
-        category: 'Cubo Edición limitada',
+        category: 'Cubo Edición limitada, Speedcube',
         price: 49.99,
         image: '/images/cuboair3x3.png',
         description: "La joya de la corona. El CubeX Pro es una edición especial ultraligera con un mecanismo magnético avanzado. Ofrece una sensación de giro inigualable y un control superior para los cubers más exigentes.",
@@ -53,7 +53,7 @@ export const allProducts = [
     {
         id: "6",
         name: 'CubeX Mini 2x2',
-        category: 'Cubo de bolsillo',
+        category: 'Cubo de bolsillo, Speedcube',
         price: 19.99,
         image: '/images/cubo2x2.png',
         description: "La introducción perfecta al mundo del cubing. El 2x2 es rápido de resolver, divertido y fácil de llevar a todas partes. Ideal para niños y principiantes que quieren aprender los fundamentos.",
@@ -63,7 +63,7 @@ export const allProducts = [
     {
         id: "7",
         name: 'SkewbX Pro',
-        category: 'Skewb',
+        category: 'Skewb, Speedcube',
         price: 27.99,
         image: '/images/skewb.png',
         description: "Un puzzle que te hará pensar de otra manera. El Skewb gira en torno a sus esquinas, ofreciendo una lógica de resolución completamente distinta a los cubos tradicionales. Un reto refrescante y muy entretenido.",
@@ -73,7 +73,7 @@ export const allProducts = [
     {
         id: "8",
         name: 'CubeX 5x5 Master',
-        category: 'Cubo Avanzado',
+        category: 'Cubo Avanzado, Speedcube',
         price: 44.99,
         image: '/images/cubo5x5.png',
         description: "Para los verdaderos maestros del cubo. El 5x5 aumenta la complejidad con más capas y piezas que alinear. Requiere paciencia, estrategia y un dominio de algoritmos avanzados.",
