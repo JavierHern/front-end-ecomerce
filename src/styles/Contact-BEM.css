@@ -1,38 +1,45 @@
-.contact-page {
+/* ========================================
+   BLOQUE: CONTACT (Página de Contacto)
+   ======================================== */
+.contact {
     min-height: 100vh;
     background: #1d1d1f;
     padding-top: 20px;
     padding-bottom: 50px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Hero Section */
-.contact-hero {
+/* ========================================
+   ELEMENTO: HERO DE CONTACTO
+   ======================================== */
+.contact__hero {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.contact-hero h1 {
+/* ========================================
+   ELEMENTO: TÍTULO DEL HERO
+   ======================================== */
+.contact__hero-title {
     font-size: 3rem;
     color: #f5f5f7;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
-.contact-hero p {
+/* ========================================
+   ELEMENTO: SUBTÍTULO DEL HERO
+   ======================================== */
+.contact__hero-subtitle {
     font-size: 1.2rem;
     color: #86868b;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Contact Grid */
-.contact-grid {
+/* ========================================
+   ELEMENTO: GRID DE CONTACTO
+   ======================================== */
+.contact__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
@@ -40,6 +47,9 @@
     margin: 0 auto;
 }
 
+/* ========================================
+   BLOQUE: CONTACT-CARD (Tarjeta de Contacto)
+   ======================================== */
 .contact-card {
     display: flex;
     align-items: flex-start;
@@ -57,7 +67,10 @@
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
 
-.contact-icon {
+/* ========================================
+   ELEMENTO: ICONO DE LA TARJETA
+   ======================================== */
+.contact-card__icon {
     width: 60px;
     height: 60px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -70,25 +83,36 @@
     flex-shrink: 0;
 }
 
-.contact-details {
+/* ========================================
+   ELEMENTO: DETALLES DE LA TARJETA
+   ======================================== */
+.contact-card__details {
     flex: 1;
 }
 
-.contact-details h3 {
+/* ========================================
+   ELEMENTO: TÍTULO DE LA TARJETA
+   ======================================== */
+.contact-card__title {
     color: #f5f5f7;
     font-size: 1.3rem;
     margin-bottom: 15px;
     font-weight: 600;
 }
 
-.contact-details p {
+/* ========================================
+   ELEMENTO: TEXTO DE LA TARJETA
+   ======================================== */
+.contact-card__text {
     color: #86868b;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 8px;
 }
 
-/* Social Links */
+/* ========================================
+   BLOQUE: SOCIAL-LINKS (Enlaces Sociales)
+   ======================================== */
 .social-links {
     display: flex;
     flex-direction: column;
@@ -96,7 +120,10 @@
     margin-top: 5px;
 }
 
-.social-link {
+/* ========================================
+   ELEMENTO: ENLACE SOCIAL
+   ======================================== */
+.social-links__link {
     color: #86868b;
     text-decoration: none;
     font-size: 0.95rem;
@@ -106,26 +133,28 @@
     gap: 8px;
 }
 
-.social-link:hover {
+.social-links__link:hover {
     color: #667eea;
 }
 
-.social-link i {
+.social-links__link i {
     width: 18px;
     text-align: center;
 }
 
-/* Responsive Design */
+/* ========================================
+   RESPONSIVE DESIGN - TABLET
+   ======================================== */
 @media (max-width: 768px) {
-    .contact-page {
+    .contact {
         padding-top: 80px;
     }
 
-    .contact-hero h1 {
+    .contact__hero-title {
         font-size: 2.5rem;
     }
 
-    .contact-grid {
+    .contact__grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
@@ -134,31 +163,34 @@
         padding: 25px;
     }
 
-    .contact-icon {
+    .contact-card__icon {
         width: 50px;
         height: 50px;
         font-size: 1.3rem;
     }
 
-    .contact-details h3 {
+    .contact-card__title {
         font-size: 1.2rem;
     }
 
-    .contact-details p {
+    .contact-card__text {
         font-size: 0.9rem;
     }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - MÓVIL
+   ======================================== */
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
     }
 
-    .contact-hero h1 {
+    .contact__hero-title {
         font-size: 2rem;
     }
 
-    .contact-hero p {
+    .contact__hero-subtitle {
         padding: 3px;
     }
 
@@ -166,7 +198,7 @@
         padding: 20px;
     }
 
-    .contact-grid {
+    .contact__grid {
         grid-template-columns: 1fr;
         max-width: none;
     }

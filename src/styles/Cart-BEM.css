@@ -1,0 +1,267 @@
+/* ========================================
+   BLOQUE: CART (Carrito Principal)
+   ======================================== */
+.cart {
+    padding: 40px 0;
+}
+
+/* ========================================
+   ELEMENTO: TÍTULO DEL CARRITO
+   ======================================== */
+.cart__title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ========================================
+   ELEMENTO: CONTENIDO DEL CARRITO
+   ======================================== */
+.cart__content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ========================================
+   ELEMENTO: LISTA DE ARTÍCULOS
+   ======================================== */
+.cart__items {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* ========================================
+   BLOQUE: CART-ITEM (Artículo del Carrito)
+   ======================================== */
+.cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1e;
+    padding: 20px;
+    border-radius: 12px;
+    gap: 20px;
+    position: relative;
+}
+
+/* ========================================
+   ELEMENTO: IMAGEN DEL ARTÍCULO
+   ======================================== */
+.cart-item__image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #2c2c2e;
+    border-radius: 8px;
+}
+
+/* ========================================
+   ELEMENTO: DETALLES DEL ARTÍCULO
+   ======================================== */
+.cart-item__details {
+    flex-grow: 1;
+}
+
+/* ========================================
+   ELEMENTO: NOMBRE DEL ARTÍCULO
+   ======================================== */
+.cart-item__name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f5f5f7;
+    text-decoration: none;
+}
+
+.cart-item__name:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   ELEMENTO: PRECIO DEL ARTÍCULO
+   ======================================== */
+.cart-item__price {
+    color: #a1a1a6;
+    margin: 5px 0 0;
+}
+
+/* ========================================
+   ELEMENTO: CANTIDAD DEL ARTÍCULO
+   ======================================== */
+.cart-item__quantity {
+    color: #a1a1a6;
+    margin: 5px 0 0;
+}
+
+/* ========================================
+   ELEMENTO: BOTÓN ELIMINAR ARTÍCULO
+   ======================================== */
+.cart-item__remove {
+    background: none;
+    border: none;
+    color: #a1a1a6;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cart-item__remove:hover {
+    color: #ff453a;
+}
+
+/* ========================================
+   BLOQUE: CART-SUMMARY (Resumen del Carrito)
+   ======================================== */
+.cart-summary {
+    flex: 1;
+    background-color: #1c1c1e;
+    padding: 30px;
+    border-radius: 12px;
+    position: sticky;
+    top: 100px;
+}
+
+/* ========================================
+   ELEMENTO: TÍTULO DEL RESUMEN
+   ======================================== */
+.cart-summary__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   ELEMENTO: LÍNEA DEL RESUMEN
+   ======================================== */
+.cart-summary__line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* ========================================
+   ELEMENTO: TOTAL DEL RESUMEN
+   ======================================== */
+.cart-summary__total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #3a3a3c;
+}
+
+/* ========================================
+   ELEMENTO: CONTENEDOR DE BOTONES
+   ======================================== */
+.cart-summary__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========================================
+   ELEMENTO: BOTONES DEL RESUMEN
+   ======================================== */
+.cart-summary__button {
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   MODIFICADOR: BOTÓN DE CHECKOUT
+   ======================================== */
+.cart-summary__button--checkout {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cart-summary__button--checkout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* ========================================
+   MODIFICADOR: BOTÓN LIMPIAR CARRITO
+   ======================================== */
+.cart-summary__button--clear {
+    width: 80%;
+    background: rgba(255, 69, 58, 0.1);
+    color: #ff453a;
+    border: 1px solid rgba(255, 69, 58, 0.3);
+}
+
+.cart-summary__button--clear:hover {
+    background: rgba(255, 69, 58, 0.2);
+    border-color: #ff453a;
+}
+
+/* ========================================
+   BLOQUE: CART-EMPTY (Carrito Vacío)
+   ======================================== */
+.cart-empty {
+    text-align: center;
+    padding: 80px 0;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================================
+   ELEMENTO: TÍTULO CARRITO VACÍO
+   ======================================== */
+.cart-empty__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   ELEMENTO: MENSAJE CARRITO VACÍO
+   ======================================== */
+.cart-empty__message {
+    color: #a1a1a6;
+    margin-bottom: 30px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MÓVILES
+   ======================================== */
+@media (max-width: 800px) {
+    .cart__content {
+        flex-direction: column;
+    }
+
+    .cart-summary {
+        position: static;
+        width: 100%;
+    }
+
+    .cart__title {
+        font-size: 2rem;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cart-item__remove {
+        align-self: flex-end;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+}

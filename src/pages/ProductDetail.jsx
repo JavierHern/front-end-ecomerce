@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { allProducts } from '../data/ProductsInventory';
-import AddCartBtn from '../components/AddCartBnt';
+import AddCartBtn from '../components/AddCartBtn';
 import CubeImage from '../components/CubeImage';
-import '../styles/ProductDetail.css';
+import '../styles/ProductDetail-BEM.css';
 
 const ProductDetail = () => {
     const { productId } = useParams(); // Hook para leer los parámetros de la URL
@@ -20,8 +20,8 @@ const ProductDetail = () => {
 
     if (loading) {
         return (
-            <div className="loader-container">
-                <div className="loader"></div>
+            <div className="loader">
+                <div className="loader__spinner"></div>
             </div>
         );
     }
@@ -29,9 +29,9 @@ const ProductDetail = () => {
     if (!product) {
         return (
             <div className="container product-not-found">
-                <h2>Producto no encontrado</h2>
-                <p>Lo sentimos, no pudimos encontrar el producto que estás buscando.</p>
-                <Link to="/productos" className="btn-primary">
+                <h2 className="product-not-found__title">Producto no encontrado</h2>
+                <p className="product-not-found__message">Lo sentimos, no pudimos encontrar el producto que estás buscando.</p>
+                <Link to="/productos" className="product-not-found__link">
                     Volver a la tienda
                 </Link>
             </div>
@@ -39,20 +39,22 @@ const ProductDetail = () => {
     }
 
     return (
-        <div className="container product-detail-container">
-            <div className="product-detail-grid">
-                <div className="product-detail-image-container">
+        <div className="container product-detail">
+            <div className="product-detail__grid">
+                <div className="product-detail__image-container">
                     <CubeImage src={product.image} alt={product.name} />
                 </div>
-                <div className="product-detail-info">
-                    <h1 className="product-detail-name">{product.name}</h1>
-                    <p className="product-detail-category">{product.category}</p>
-                    <p className="product-detail-price">${product.price.toFixed(2)}</p>
-                    <p className="product-detail-description">
+                <div className="product-detail__info">
+                    <h1 className="product-detail__name">{product.name}</h1>
+                    <p className="product-detail__category">{product.category}</p>
+                    <p className="product-detail__price">${product.price.toFixed(2)}</p>
+                    <p className="product-detail__description">
                         {product.description}
                     </p>
-                    <AddCartBtn product={product} />
-                    <Link to="/productos" className="back-store">
+                    <div className="product-detail__add-btn">
+                        <AddCartBtn product={product} />
+                    </div>
+                    <Link to="/productos" className="product-detail__back-link">
                         Volver a la tienda
                     </Link>
                 </div>

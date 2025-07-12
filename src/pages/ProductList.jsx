@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { allProducts } from '../data/ProductsInventory';
 import ProductGrid from '../components/ProductGrid';
-import '../styles/ProductList.css';
+import '../styles/ProductList-BEM.css';
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
@@ -22,14 +22,14 @@ const ProductList = () => {
 
     if (loading) {
         return (
-            <div className="loader-container">
-                <div className="loader"></div>
+            <div className="product-list-loader">
+                <div className="product-list-loader__spinner"></div>
             </div>
         );
     }
 
     return (
-        <div className="container product-list-container">
+        <div className="container product-list">
             <ProductGrid title="Todos Nuestros Productos" products={products} />
         </div>
     );

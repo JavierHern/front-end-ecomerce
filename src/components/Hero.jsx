@@ -1,37 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AddCartBtn from './AddCartBnt';
-import '../styles/Hero.css';
+import AddCartBtn from './AddCartBtn';
+import '../styles/Hero-BEM.css';
 
 const Hero = () => {
-  return (
-    <section className="hero">
-      <div className="container">
-        <div className="hero-content">
-          <h1 className="hero-title">CubeX 3x3</h1>
-          <h2 className="hero-subtitle">Redefine tu experiencia de speedcubing.</h2>
-          <p className="hero-description">
-            Nuestro nuevo cubo magnético de alta precisión con tecnología avanzada para profesionales y entusiastas.
-          </p>
-          <div className="hero-links">
-            <div className='hero-link primary'>
-              <AddCartBtn />
+    return (
+        <section className="hero">
+            <div className="container">
+                <div className="hero__content">
+                    <h1 className="hero__title">CubeX 3x3</h1>
+                    <h2 className="hero__subtitle">Redefine tu experiencia de speedcubing.</h2>
+                    <p className="hero__description">
+                        Nuestro nuevo cubo magnético de alta precisión con tecnología avanzada para profesionales y entusiastas.
+                    </p>
+                    <div className="hero__links">
+                        <div className="hero__link hero__link--primary">
+                            <AddCartBtn />
+                        </div>
+                        <Link to="/producto/1" className="hero__link hero__link--secondary">
+                            Más información
+                        </Link>
+                    </div>
+                </div>
+                <div className="hero__image-container">
+                    <img
+                        src="/images/cubo3x3.png"
+                        alt="CubeX Pro Rubik's Cube"
+                        className="hero__image"
+                    />
+                </div>
             </div>
-            <Link to="/producto/1" className="hero-link secondary">
-              Más información
-            </Link>
-          </div>
-        </div>
-        <div className="hero-image-container">
-          <img
-            src="/images/cubo3x3.png"
-            alt="CubeX Pro Rubik's Cube"
-            className="hero-image"
-          />
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default Hero;

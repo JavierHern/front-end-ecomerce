@@ -1,0 +1,29 @@
+/* ========================================
+   BLOQUE: ADD-CART-BTN (Botón Agregar al Carrito)
+   ======================================== */
+.add-cart-btn {
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.add-cart-btn:hover {
+    background-color: #0077ed;
+    transform: scale(1.03);
+}
+
+.add-cart-btn:active {
+    transform: scale(0.98);
+}
+
+.add-cart-btn:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}

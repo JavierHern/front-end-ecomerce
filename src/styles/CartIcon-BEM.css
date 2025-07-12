@@ -1,0 +1,66 @@
+/* ========================================
+   BLOQUE: CART-ICON (Icono del Carrito)
+   ======================================== */
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    text-decoration: none;
+    color: #f5f5f7;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.cart-icon:hover {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+/* ========================================
+   ELEMENTO: SÍMBOLO DEL CARRITO
+   ======================================== */
+.cart-icon__symbol {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover .cart-icon__symbol {
+    transform: scale(1.1);
+}
+
+/* ========================================
+   ELEMENTO: BADGE DE CANTIDAD
+   ======================================== */
+.cart-icon__badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #ff453a;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

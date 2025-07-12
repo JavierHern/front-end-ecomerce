@@ -1,11 +1,11 @@
-import '../styles/CubeImage.css'
+import '../styles/CubeImage-BEM.css'
 
 const CubeImage = ({ src, alt }) => {
     return (
         <img
             src={src}
             alt={alt}
-            className="product-image"
+            className="cube-image"
         />
     )
 }

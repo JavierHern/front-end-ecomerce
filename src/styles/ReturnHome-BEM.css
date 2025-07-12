@@ -1,0 +1,57 @@
+/* ========================================
+   BLOQUE: RETURN-HOME (Botón Regresar)
+   ======================================== */
+.return-home {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.return-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    text-decoration: none;
+    color: white;
+}
+
+.return-home:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   MODIFICADOR: BOTÓN SECUNDARIO
+   ======================================== */
+.return-home--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.return-home--secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   MODIFICADOR: BOTÓN PEQUEÑO
+   ======================================== */
+.return-home--small {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* ========================================
+   MODIFICADOR: BOTÓN GRANDE
+   ======================================== */
+.return-home--large {
+    padding: 20px 40px;
+    font-size: 18px;
+}
