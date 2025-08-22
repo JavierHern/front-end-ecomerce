@@ -48,6 +48,7 @@ const ProductDetail = () => {
                     <h1 className="product-detail__name">{product.name}</h1>
                     <p className="product-detail__category">{product.category}</p>
                     <p className="product-detail__price">${product.price.toFixed(2)}</p>
+                    <p className="product-detail__category">{product.stock}</p>
                     <p className="product-detail__description">
                         {product.description}
                     </p>

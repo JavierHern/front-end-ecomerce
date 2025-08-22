@@ -123,6 +123,17 @@
     top: 100px;
 }
 
+.cart-summary_pedido {
+    flex: 1;
+    background-color: #1c1c1e;
+    padding: 30px;
+    border-radius: 12px;
+    position: sticky;
+    top: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
 /* ========================================
    ELEMENTO: TÍTULO DEL RESUMEN
    ======================================== */
@@ -136,6 +147,13 @@
    ======================================== */
 .cart-summary__line {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.cart-summary__line-pedido {
+    display: flexbox;
     justify-content: space-between;
     margin-bottom: 15px;
     font-size: 1rem;

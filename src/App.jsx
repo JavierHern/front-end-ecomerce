@@ -8,6 +8,7 @@ import Cart from './pages/Cart';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Pedido from './pages/Pedido';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/carrito" element={<Cart />} />
           <Route path="/buscar" element={<ProductList />} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/pedido" element={<Pedido />} />
           {/* Aquí irían más rutas */}
           <Route path="*" element={<NotFound />} />
         </Routes>

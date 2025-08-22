@@ -53,7 +53,7 @@ const Cart = () => {
                         <span>${cartTotal}</span>
                     </div>
                     <div className="cart-summary__buttons">
-                        <button className="cart-summary__button cart-summary__button--checkout">Proceder al Pago</button>
+                        <Link to="/pedido"><button className="cart-summary__button cart-summary__button--checkout">Realizar Pedido</button></Link>
                         <button onClick={clearCart} className="cart-summary__button cart-summary__button--clear">
                             Vaciar Carrito
                         </button>
