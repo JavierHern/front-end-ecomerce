@@ -8,16 +8,46 @@ const ProductList = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Simulamos una carga de datos asíncroan, como si fuera una API real.
-        // Esto demuestra un uso práctico para el uso de useEffect.
-        const fetchProducts = () => {
-            setTimeout(() => {
-                setProducts(allProducts);
+        const controller = new AbortController();
+        const apiUrl = 'http://localhost:8081/api/products'
+
+        const fetchProducts = async () => {
+            setLoading(true);
+            try {
+                const res = await fetch(apiUrl, { signal: controller.signal });
+                if (!res.ok) {
+                    throw new Error(`Error HTTP ${res.status}`);
+                }
+                const data = await res.json();
+
+                // Normalizar: si la API devuelve { products: [...] } o { data: [...] } o un array directamente
+                const normalized = Array.isArray(data)
+                    ? data
+                    : Array.isArray(data?.products)
+                        ? data.products
+                        : Array.isArray(data?.data)
+                            ? data.data
+                            : allProducts; // fallback local
+
+                setProducts(normalized);
+            } catch (err) {
+                if (err.name === 'AbortError') {
+                    // Petición abortada: no hacer nada.
+                } else {
+                    console.error('Error fetching products:', err);
+                    // Fallback: usar datos locales si la API falla
+                    setProducts(allProducts);
+                }
+            } finally {
                 setLoading(false);
-            }) // Se puede agregar un pequeño retraso para simular la carga
+            }
         };
 
         fetchProducts();
+
+        return () => {
+            controller.abort();
+        };
     }, []); // El array de dependencias vacío asegura que se ejecute solo una vez
 
     if (loading) {

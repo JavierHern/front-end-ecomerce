@@ -4,6 +4,8 @@ import '../styles/ProductGrid-BEM.css';
 import { Link } from 'react-router-dom';
 
 const ProductGrid = ({ title, products }) => {
+    const items = Array.isArray(products) ? products : [];
+
     return (
         <section className="product-section">
             <div className="container">
@@ -12,9 +14,13 @@ const ProductGrid = ({ title, products }) => {
                     <Link to="/productos" className="product-section__view-all-link">Ver todos</Link>
                 </div>
                 <div className="product-section__grid">
-                    {products.map(product => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
+                    {items.length === 0 ? (
+                        <p>No hay productos para mostrar.</p>
+                    ) : (
+                        items.map(product => (
+                            <ProductCard key={product.id} product={product} />
+                        ))
+                    )}
                 </div>
             </div>
         </section>
