@@ -9,7 +9,7 @@ const ProductList = () => {
 
     useEffect(() => {
         const controller = new AbortController();
-        const apiUrl = 'http://localhost:8081/api/products'
+        const apiUrl = 'https://polite-babka-2ccb05.netlify.app'
 
         const fetchProducts = async () => {
             setLoading(true);
